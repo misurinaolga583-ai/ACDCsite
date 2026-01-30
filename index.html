@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC/DC - Официальный сайт</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Rock+Salt&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">AC/DC</a>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="concerts.html">Концерты</a></li>
+                <li><a href="tracks.html">Треки</a></li>
+                <li><a href="merch.html">Мерч</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Первый экран -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="band-name">AC/DC</h1>
+            <p class="slogan">High Voltage Rock 'n' Roll</p>
+            <a href="#about" class="btn-hero">Узнать больше</a>
+        </div>
+    </section>
+
+    <!-- О группе -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">Легендарная группа</h2>
+            <p class="section-text">AC/DC — австралийская рок-группа, сформированная в Сиднее в 1973 году. Группа считается одной из самых влиятельных и успешных рок-групп в истории музыки.</p>
+        </div>
+    </section>
+
+    <!-- Участники -->
+    <section class="section members">
+        <div class="container">
+            <h2 class="section-title">Участники группы</h2>
+            <div class="members-grid">
+                <div class="member-card">
+                    <img src="assets/images/e9c6bd74f7909ec10780fb43d95744f0.jpg" alt="Ангус Янг" class="member-img">
+                    <h3 class="member-name">Ангус Янг</h3>
+                    <p class="member-role">Соло-гитарист</p>
+                    <p class="member-desc">Известен своей школьной формой и энергичными выступлениями.</p>
+                </div>
+                <div class="member-card">
+                    <img src="assets/images/661e1536fb87c50ae3122c3f0ceece8f.jpg" alt="Брайан Джонсон" class="member-img">
+                    <h3 class="member-name">Брайан Джонсон</h3>
+                    <p class="member-role">Вокалист</p>
+                    <p class="member-desc">Присоединился к группе в 1980 году после смерти Бона Скотта.</p>
+                </div>
+                <div class="member-card">
+                    <img src="assets/images/326ec1632f6652e5a7f83da3d30053ef.jpg" alt="Стиви Янг" class="member-img">
+                    <h3 class="member-name">Стиви Янг</h3>
+                    <p class="member-role">Ритм-гитарист</h3>
+                    <p class="member-desc">Племянник основателей группы, заменил Малькольма Янга в 2014.</p>
+                </div>
+                <div class="member-card">
+                    <img src="assets/images/09208abdb529f60952462df8cba91719.jpg" alt="Клифф Уильямс" class="member-img">
+                    <h3 class="member-name">Клифф Уильямс</h3>
+                    <p class="member-role">Бас-гитарист</p>
+                    <p class="member-desc">Присоединился к группе в 1977 году и играет по сей день.</p>
+                </div>
+                <div class="member-card">
+                    <img src="assets/images/306e0cdb7a83233d0b5d3fac6e680a9b.jpg" alt="Фил Радд" class="member-img">
+                    <h3 class="member-name">Фил Радд</h3>
+                    <p class="member-role">Барабанщик</p>
+                    <p class="member-desc">Играл с группой в самые успешные годы, известен своим мощным грувом.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Слайдер с постерами -->
+    <section class="section posters">
+        <div class="container">
+            <h2 class="section-title">Легендарные постеры</h2>
+            <div class="slider">
+                <div class="slider-container">
+                    <div class="slide">
+                        <img src="assets/posters/25268f6edcf2e82063fa54d40418b254.jpg" alt="Постер AC/DC 1">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/posters/2a162eb4110ced36f301efd4a3b50df5.jpg" alt="Постер AC/DC 2">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/posters/ab7cd7a2b44eaf476f73557c04e1d45c.jpg" alt="Постер AC/DC 3">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/posters/poster4.jpg" alt="Постер AC/DC 4">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/posters/poster5.jpg" alt="Постер AC/DC 5">
+                    </div>
+                </div>
+                <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                    <span class="dot" data-slide="4"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">AC/DC</div>
+                <p class="footer-text">© 1973-2023 AC/DC. Все права защищены.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-spotify"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
