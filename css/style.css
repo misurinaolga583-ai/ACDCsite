@@ -1,0 +1,927 @@
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0a0a0a;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-family: 'Rock Salt', cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #ff0000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-text {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #ccc;
+}
+
+/* Навигация */
+.navbar {
+    background-color: #111;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Rock Salt', cursive;
+    font-size: 2rem;
+    color: #ff0000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-left: 30px;
+}
+
+.nav-menu a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #ff0000;
+}
+
+.nav-toggle {
+    display: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Герой-секция */
+.hero {
+    height: 100vh;
+    background: url(../assets/images/29d5c2846b684d79c28a3a08af0aa3ce.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    filter: grayscale(30%);
+}
+
+.hero-content {
+    padding-top: 80px;
+}
+
+.band-name {
+    font-family: 'Rock Salt', cursive;
+    font-size: 6rem;
+    color: #ff0000;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+}
+
+.slogan {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.btn-hero {
+    display: inline-block;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    border: 2px solid #ff0000;
+}
+
+.btn-hero:hover {
+    background-color: transparent;
+    color: #ff0000;
+}
+
+/* Участники группы */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.member-card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #333;
+}
+
+.member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+}
+
+.member-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    filter: grayscale(20%);
+}
+
+.member-name {
+    font-size: 1.5rem;
+    color: #ff0000;
+    margin: 15px 20px 5px;
+}
+
+.member-role {
+    font-size: 1.1rem;
+    color: #ff9900;
+    margin: 0 20px 10px;
+    font-weight: bold;
+}
+
+.member-desc {
+    padding: 0 20px 20px;
+    color: #ccc;
+}
+
+/* Слайдер с постерами */
+.slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 0, 0, 0.7);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.slider-btn:hover {
+    background-color: rgba(255, 0, 0, 0.9);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #ff0000;
+}
+
+/* Страница концертов */
+.page-header {
+    padding: 150px 0 80px;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80') center/cover no-repeat;
+}
+
+.page-title {
+    font-family: 'Rock Salt', cursive;
+    font-size: 3.5rem;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+.page-subtitle {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.concerts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.concert-card {
+    display: flex;
+    align-items: center;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 20px;
+    border-left: 5px solid #ff0000;
+    transition: transform 0.3s;
+}
+
+.concert-card:hover {
+    transform: translateX(10px);
+}
+
+.concert-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    min-width: 80px;
+}
+
+.concert-date .day {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.concert-date .month {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.concert-date .year {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.concert-info {
+    flex-grow: 1;
+}
+
+.concert-city {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.concert-venue {
+    font-size: 1.2rem;
+    color: #ff9900;
+    margin-bottom: 5px;
+}
+
+.concert-time {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.btn-ticket {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-ticket:hover {
+    background-color: #cc0000;
+}
+
+/* Модальное окно */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    display: none;
+}
+
+.modal {
+    background-color: #1a1a1a;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.2);
+}
+
+.modal-header {
+    background-color: #ff0000;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    font-family: 'Rock Salt', cursive;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    border: 1px solid #555;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #ff0000;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #cc0000;
+}
+
+/* Страница с треками */
+.player-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.player {
+    flex: 1;
+    min-width: 300px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.player-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.album-art {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.album-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.track-title {
+    font-size: 2rem;
+    color: #ff0000;
+    margin-bottom: 5px;
+}
+
+.track-artist {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.track-album {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.control-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.control-btn:hover {
+    background-color: #ff0000;
+}
+
+.play-btn {
+    width: 70px;
+    height: 70px;
+    font-size: 1.5rem;
+    background-color: #ff0000;
+}
+
+.play-btn:hover {
+    background-color: #cc0000;
+}
+
+.player-progress {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.current-time,
+.duration {
+    font-size: 0.9rem;
+    color: #ccc;
+    min-width: 40px;
+}
+
+.progress-bar {
+    flex-grow: 1;
+    height: 6px;
+    background-color: #333;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background-color: #ff0000;
+    border-radius: 3px;
+    width: 0%;
+}
+
+.player-volume {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.volume-icon {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.volume-bar {
+    flex-grow: 1;
+    height: 6px;
+    background-color: #333;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+}
+
+.volume-level {
+    height: 100%;
+    background-color: #ff0000;
+    border-radius: 3px;
+    width: 70%;
+}
+
+/* Плейлист */
+.playlist {
+    flex: 1;
+    min-width: 300px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.playlist-title {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.playlist-tracks {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.playlist-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.playlist-item:hover {
+    background-color: #222;
+}
+
+.playlist-item.active {
+    background-color: #222;
+    border-left: 3px solid #ff0000;
+}
+
+.track-number {
+    font-size: 1.2rem;
+    color: #ff0000;
+    font-weight: bold;
+    margin-right: 20px;
+    min-width: 30px;
+}
+
+.track-details {
+    flex-grow: 1;
+}
+
+.track-details h4 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.track-details p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.track-duration {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.player-instructions {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 25px;
+    border-left: 5px solid #ff0000;
+}
+
+.player-instructions h3 {
+    color: #ff0000;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.player-instructions ol {
+    padding-left: 20px;
+    color: #ccc;
+}
+
+.player-instructions li {
+    margin-bottom: 10px;
+}
+
+.player-instructions code {
+    background-color: #333;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: monospace;
+    color: #ff9900;
+}
+
+/* Страница мерча */
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.merch-item {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.merch-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+}
+
+.merch-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.merch-name {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 15px 20px 5px;
+}
+
+.merch-price {
+    font-size: 1.3rem;
+    color: #ff9900;
+    font-weight: bold;
+    margin: 0 20px 15px;
+}
+
+.btn-merch {
+    display: block;
+    width: calc(100% - 40px);
+    margin: 0 20px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-merch:hover {
+    background-color: #cc0000;
+}
+
+/* Футер */
+.footer {
+    background-color: #111;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer-logo {
+    font-family: 'Rock Salt', cursive;
+    font-size: 2.5rem;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+.footer-text {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #ff0000;
+    transform: translateY(-5px);
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .band-name {
+        font-size: 4rem;
+    }
+    
+    .slogan {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .concert-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .concert-date {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #111;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: transform 0.3s, opacity 0.3s;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+    .nav-menu li {
+        margin: 15px 0;
+    }
+    
+    .band-name {
+        font-size: 3rem;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .player-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .album-art {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section {
+        padding: 50px 0;
+    }
+    
+    .band-name {
+        font-size: 2.5rem;
+    }
+    
+    .slogan {
+        font-size: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .members-grid {
+        grid-template-columns: 1fr;
+    }
+}
