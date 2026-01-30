@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC/DC - Треки</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Rock+Salt&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">AC/DC</a>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="concerts.html">Концерты</a></li>
+                <li><a href="tracks.html" class="active">Треки</a></li>
+                <li><a href="merch.html">Мерч</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Заголовок страницы -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Треки и альбомы</h1>
+            <p class="page-subtitle">Слушайте лучшие хиты AC/DC</p>
+        </div>
+    </section>
+
+    <!-- Аудиоплеер -->
+    <section class="section player-section">
+        <div class="container">
+            <div class="player-container">
+                <div class="player">
+                    <div class="player-info">
+                        <div class="album-art">
+                            <img src="https://upload.wikimedia.org/wikipedia/ru/thumb/9/92/Back_in_Black.jpg/800px-Back_in_Black.jpg" alt="Back in Black Album">
+                        </div>
+                        <div class="track-info">
+                            <h2 class="track-title">Back in Black</h2>
+                            <p class="track-artist">AC/DC</p>
+                            <p class="track-album">Album: Back in Black (1980)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="player-controls">
+                        <button id="prevBtn" class="control-btn">
+                            <i class="fas fa-step-backward"></i>
+                        </button>
+                        <button id="playBtn" class="control-btn play-btn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button id="nextBtn" class="control-btn">
+                            <i class="fas fa-step-forward"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="player-progress">
+                        <span class="current-time" id="currentTime">0:00</span>
+                        <div class="progress-bar">
+                            <div class="progress" id="progress"></div>
+                        </div>
+                        <span class="duration" id="duration">0:00</span>
+                    </div>
+                    
+                    <div class="player-volume">
+                        <i class="fas fa-volume-up volume-icon"></i>
+                        <div class="volume-bar">
+                            <div class="volume-level" id="volumeLevel"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Список треков -->
+                <div class="playlist">
+                    <h3 class="playlist-title">Плейлист AC/DC</h3>
+                    <div class="playlist-tracks">
+                        <!-- 
+                            ВАЖНО: Чтобы изменить треки на реальные, нужно:
+                            1. Скачать MP3 файлы песен AC/DC
+                            2. Поместить их в папку assets/audio/
+                            3. Обновить атрибут data-src в элементах ниже
+                            4. Указать правильные названия и длительность треков
+                        -->
+                        <div class="playlist-item active" data-src="assets/audio/ACDC_-_Highway_to_Hell_47830059.mp3" data-title="Highway to Hell" data-artist="AC/DC" data-album="Highway to Hell (1979)">
+                            <div class="track-number">1</div>
+                            <div class="track-details">
+                                <h4 class="track-title">Highway to Hell</h4>
+                                <p class="track-album">Highway to Hell (1979)</p>
+                            </div>
+                            <div class="track-duration">3:28</div>
+                        </div>
+                        
+                        <div class="playlist-item" data-src="assets/audio/ACDC_-_Back_In_Black_47830042.mp3" data-title="Back in Black" data-artist="AC/DC" data-album="Back in Black (1980)">
+                            <div class="track-number">2</div>
+                            <div class="track-details">
+                                <h4 class="track-title">Back in Black</h4>
+                                <p class="track-album">Back in Black (1980)</p>
+                            </div>
+                            <div class="track-duration">4:15</div>
+                        </div>
+                        
+                        <div class="playlist-item" data-src="assets/audio/ACDC_-_Thunderstruck_47830044.mp3" data-title="Thunderstruck" data-artist="AC/DC" data-album="The Razors Edge (1990)">
+                            <div class="track-number">3</div>
+                            <div class="track-details">
+                                <h4 class="track-title">Thunderstruck</h4>
+                                <p class="track-album">The Razors Edge (1990)</p>
+                            </div>
+                            <div class="track-duration">4:52</div>
+                        </div>
+                        
+                        <div class="playlist-item" data-src="assets/audio/ACDC_-_Hells_Bells_47852336.mp3" data-title="Hells Bells" data-artist="AC/DC" data-album="Back in Black (1980)">
+                            <div class="track-number">4</div>
+                            <div class="track-details">
+                                <h4 class="track-title">Hells Bells</h4>
+                                <p class="track-album">Back in Black (1980)</p>
+                            </div>
+                            <div class="track-duration">5:12</div>
+                        </div>
+                        
+                        <div class="playlist-item" data-src="assets/audio/ACDC_-_You_Shook_Me_All_Night_Long_47852345.mp3" data-title="You Shook Me All Night Long" data-artist="AC/DC" data-album="Back in Black (1980)">
+                            <div class="track-number">5</div>
+                            <div class="track-details">
+                                <h4 class="track-title">You Shook Me All Night Long</h4>
+                                <p class="track-album">Back in Black (1980)</p>
+                            </div>
+                            <div class="track-duration">3:30</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="player-instructions">
+                <h3>Как добавить свои треки:</h3>
+                <ol>
+                    <li>Скачайте MP3 файлы песен AC/DC</li>
+                    <li>Поместите их в папку <code>assets/audio/</code></li>
+                    <li>В файле <code>tracks.html</code> найдите элементы с классом <code>playlist-item</code></li>
+                    <li>Обновите атрибут <code>data-src</code> на путь к вашим файлам</li>
+                    <li>Также обновите названия треков, альбомов и длительность</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">AC/DC</div>
+                <p class="footer-text">© 1973-2023 AC/DC. Все права защищены.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-spotify"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

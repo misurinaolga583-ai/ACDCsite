@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC/DC - Концерты</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Rock+Salt&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">AC/DC</a>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="concerts.html" class="active">Концерты</a></li>
+                <li><a href="tracks.html">Треки</a></li>
+                <li><a href="merch.html">Мерч</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Заголовок страницы -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Концерты и билеты</h1>
+            <p class="page-subtitle">Не пропустите легендарные выступления AC/DC</p>
+        </div>
+    </section>
+
+    <!-- Слайдер концертов -->
+    <section class="section concerts-slider">
+        <div class="container">
+            <h2 class="section-title">Ближайшие концерты</h2>
+            <div class="concerts-container">
+                <div class="concert-card">
+                    <div class="concert-date">
+                        <span class="day">15</span>
+                        <span class="month">ОКТ</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <div class="concert-info">
+                        <h3 class="concert-city">Сидней, Австралия</h3>
+                        <p class="concert-venue">Stadium Australia</p>
+                        <p class="concert-time">Начало: 19:30</p>
+                    </div>
+                    <button class="btn-ticket" data-concert="Сидней, 15 октября 2023">Купить билет</button>
+                </div>
+                
+                <div class="concert-card">
+                    <div class="concert-date">
+                        <span class="day">22</span>
+                        <span class="month">ОКТ</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <div class="concert-info">
+                        <h3 class="concert-city">Лондон, Великобритания</h3>
+                        <p class="concert-venue">Wembley Stadium</p>
+                        <p class="concert-time">Начало: 20:00</p>
+                    </div>
+                    <button class="btn-ticket" data-concert="Лондон, 22 октября 2023">Купить билет</button>
+                </div>
+                
+                <div class="concert-card">
+                    <div class="concert-date">
+                        <span class="day">05</span>
+                        <span class="month">НОЯ</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <div class="concert-info">
+                        <h3 class="concert-city">Нью-Йорк, США</h3>
+                        <p class="concert-venue">Madison Square Garden</p>
+                        <p class="concert-time">Начало: 19:00</p>
+                    </div>
+                    <button class="btn-ticket" data-concert="Нью-Йорк, 5 ноября 2023">Купить билет</button>
+                </div>
+                
+                <div class="concert-card">
+                    <div class="concert-date">
+                        <span class="day">18</span>
+                        <span class="month">НОЯ</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <div class="concert-info">
+                        <h3 class="concert-city">Москва, Россия</h3>
+                        <p class="concert-venue">Лужники</p>
+                        <p class="concert-time">Начало: 19:30</p>
+                    </div>
+                    <button class="btn-ticket" data-concert="Москва, 18 ноября 2023">Купить билет</button>
+                </div>
+                
+                <div class="concert-card">
+                    <div class="concert-date">
+                        <span class="day">02</span>
+                        <span class="month">ДЕК</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <div class="concert-info">
+                        <h3 class="concert-city">Токио, Япония</h3>
+                        <p class="concert-venue">Tokyo Dome</p>
+                        <p class="concert-time">Начало: 18:30</p>
+                    </div>
+                    <button class="btn-ticket" data-concert="Токио, 2 декабря 2023">Купить билет</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно для покупки билетов -->
+    <div class="modal-overlay" id="ticketModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 class="modal-title">Покупка билета</h2>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="ticketForm">
+                    <div class="form-group">
+                        <label for="concert">Концерт:</label>
+                        <input type="text" id="concert" name="concert" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">ФИО:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Количество билетов:</label>
+                        <select id="quantity" name="quantity">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Категория:</label>
+                        <select id="category" name="category">
+                            <option value="standard">Стандарт ($120)</option>
+                            <option value="vip">VIP ($250)</option>
+                            <option value="front">Передние ряды ($350)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-submit">Купить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">AC/DC</div>
+                <p class="footer-text">© 1973-2023 AC/DC. Все права защищены.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-spotify"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
